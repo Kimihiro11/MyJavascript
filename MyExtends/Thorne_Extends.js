@@ -11,3 +11,12 @@ function addLoadEvent(func){
         }
     }
 }
+//把一个元素节点插到另一个元素节点之后
+function insertAfter(newElement,targetElement){
+    var parent = targetElement.parentNode;
+    if(parent.lastChild == targetElement){
+        parent.appendChild(newElement);
+    }else{
+        parent.insertBefore(newElement,targetElement,nextSibling);
+    }
+}
