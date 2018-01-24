@@ -27,5 +27,6 @@ li{
 img{
     display: block;
     clear:both;
-    height:auto;width:500px;
+    height:auto;
+    width:500px;
 }
