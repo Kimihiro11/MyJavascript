@@ -27,9 +27,6 @@ function prepareSlideshow(){
 function moveElement(elementID,final_x,final_y,interval){
     if(!document.getElementById) return false;
     var elem = document.getElementById(elementID);
-    if(elem.moveElement){
-        clearTimeout(elem.moveElement)
-    }
     var xpos = parseInt(elem.style.left);
     var ypos = parseInt(elem.style.top);
     if (xpos == final_x && ypos == final_y) {
@@ -50,7 +47,7 @@ function moveElement(elementID,final_x,final_y,interval){
     elem.style.left = xpos + "px";
     elem.style.top = ypos + "px";
     var repeat = "moveElement('"+elementID+"',"+final_x+","+final_y+","+interval+")";
-    elem.movement = setTimeout(repeat,interval);
+    movement = setTimeout(repeat,interval);
 }
 
 addLoadEvent(prepareSlideshow);
